@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-bg: #10375C;
+    --primary-btn-color: #2E80CE;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    font-size: 1.6rem;
+    height: 5000px;
+}
+
+/* Common */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+.btn {
+    /* size */
+    --height: 60px;
+    min-width: 205px;
+    height: var(--height);
+    /* center the text */
+    text-align: center;
+    line-height: var(--height);
+    /* border */
+    border-radius: 99px;
+    background: var(--primary-btn-color);
+    border: 1px solid var(--primary-btn-color);
+    color: #FFF;
+    /* font */
+    font-size: 1.6rem;
+    font-family: "Sora", sans-serif;
+    /* cursor */
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+.header {
+    min-height: 100vh;
+    background: #10375C;
+    padding-top: 30px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    font-size: 1rem;
+    position: relative;
+    display: inline-flex;
+}
+
+.logo__icon::before,
+.logo__icon::after {
+    content: "";
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.logo__icon::before {
+    width: 3em;
+    height: 3em;
+    background: var(--primary-btn-color);
+}
+
+.logo__icon::after {
+    position: absolute;
+    top: 1.1em;
+    left: 1.1em;
+    background: #fff;
+    width: 1.6em;
+    height: 1.6em;
+}
+
+.logo__content {
+    margin-left: 0.6em;
+    text-align: right;
+    line-height: 1.6em;
+}
+
+.logo__text {
+    color: #FFF;
+    font-size: 1.8em;
+}
+
+.logo__text--small {
+    font-size: 1.2em;
+}
+
+/* Navbar */
+.navbar__list {
+    display: flex;
+}
+
+.action__login,
+.navbar__link {
+    padding: 4px 21px;
+    color: #C9D2DA;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: #fff;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__link {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__link--active::before {
+    content: "";
+    display: inline-block;
+    background: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.action {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 7px;
+}
+
+.action__signup {
+    --height: 44px;
+    min-width: 104px;
+}
