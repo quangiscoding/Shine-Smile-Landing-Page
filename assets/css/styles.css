@@ -146,13 +146,13 @@ a {
     margin-right: 8px;
 }
 
-.action {
+.header-action {
     display: inline-flex;
     align-items: center;
     column-gap: 7px;
 }
 
-.action__signup {
+.header-action__signup {
     --height: 44px;
     min-width: 104px;
 }
