@@ -5,7 +5,8 @@
 }
 
 :root {
-    --header-bg-color: #10375C;
+    --header-bg: #10375C;
+    --primary-btn-color: #2E80CE;
 }
 
 html {
@@ -13,9 +14,9 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
     font-family: "Sora", sans-serif;
-    height: 3000px;
+    font-size: 1.6rem;
+    height: 5000px;
 }
 
 /* Common */
@@ -25,28 +26,23 @@ body {
     margin: 0 auto;
 }
 
-a {
-    text-decoration: none;
-}
-
 .btn {
-    --height: 60px;
     /* size */
-    min-width: 104px;
+    --height: 60px;
+    min-width: 205px;
     height: var(--height);
+    /* center the text */
+    text-align: center;
     line-height: var(--height);
-    padding: 0 20px;
-    /* color */
-    color: #FFF;
-    background: #2E80CE;
+    /* border */
     border-radius: 99px;
+    background: var(--primary-btn-color);
+    border: 1px solid var(--primary-btn-color);
+    color: #FFF;
     /* font */
-    font-family: "Sora", sans-serif;
     font-size: 1.6rem;
-    font-weight: 400;
-    /* Border */
-    border: 1px solid #2E80CE;
-    /* Cursor */
+    font-family: "Sora", sans-serif;
+    /* cursor */
     cursor: pointer;
 }
 
@@ -54,11 +50,15 @@ a {
     opacity: 0.9;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Header */
 .header {
     min-height: 100vh;
+    background: #10375C;
     padding-top: 30px;
-    background: var(--header-bg-color);
 }
 
 .header-top {
@@ -68,65 +68,67 @@ a {
 }
 
 /* Logo */
-
 .logo {
-    display: inline-flex;
     font-size: 1rem;
     position: relative;
+    display: inline-flex;
 }
 
-.logo__circle::before,
-.logo__circle::after {
+.logo__icon::before,
+.logo__icon::after {
     content: "";
     border-radius: 50%;
     display: inline-block;
 }
 
-.logo__circle::before {
+.logo__icon::before {
     width: 3em;
     height: 3em;
-    background: #2E80CE;
+    background: var(--primary-btn-color);
 }
 
-.logo__circle::after {
-    width: 1.6em;
-    height: 1.6em;
-    background: #fff;
+.logo__icon::after {
     position: absolute;
     top: 1.1em;
     left: 1.1em;
+    background: #fff;
+    width: 1.6em;
+    height: 1.6em;
 }
 
-.logo__text {
+.logo__content {
     margin-left: 0.6em;
     text-align: right;
     line-height: 1.6em;
 }
 
-.logo__brand {
+.logo__text {
     color: #FFF;
-    text-align: right;
     font-size: 1.8em;
-    display: block;
 }
 
-.logo__brand--small {
+.logo__text--small {
     font-size: 1.2em;
-    font-weight: 300;
 }
 
 /* Navbar */
-
 .navbar__list {
     display: flex;
 }
 
-.navbar__link,
-.action__log-in {
+.action__login,
+.navbar__link {
     padding: 4px 21px;
+    color: #C9D2DA;
     font-size: 1.6rem;
     font-weight: 300;
-    color: #C9D2DA;
+    line-height: 1.75;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: #fff;
+    text-shadow: 1px 0 0 currentColor;
 }
 
 .navbar__link {
@@ -134,28 +136,23 @@ a {
     align-items: center;
 }
 
-.navbar__link--active,
-.navbar__link:hover {
-    color: #fff;
-    text-shadow: 1px 0 0 currentColor;
-}
-
 .navbar__link--active::before {
     content: "";
     display: inline-block;
+    background: #fff;
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #fff;
     margin-right: 8px;
 }
 
-.action {
-    display: flex;
+.header-action {
+    display: inline-flex;
     align-items: center;
+    column-gap: 7px;
 }
 
-.action__sign-up {
+.header-action__signup {
     --height: 44px;
-    margin-left: 7px;
+    min-width: 104px;
 }
