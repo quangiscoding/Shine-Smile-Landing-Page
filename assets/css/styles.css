@@ -64,6 +64,8 @@ body {
     font-family: "Sora", sans-serif;
     /* cursor */
     cursor: pointer;
+    /* display */
+    display: inline-block;
 }
 
 .btn:hover {
@@ -392,4 +394,61 @@ a {
     margin-top: 18px;
     display: inline-block;
     transition: all 500ms ease;
+}
+
+/* Features */
+.feature {
+    margin-top: 85px;
+    padding: 85px 0;
+}
+
+.feature__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature__images {
+    width: 48.7%;
+    max-width: 570px;
+}
+
+.feature__content {
+    width: 40%;
+    max-width: 468px;
+}
+
+.feature__images {
+    position: relative;
+    padding-bottom: 121px;
+}
+
+.feature__img {
+    border-radius: 6px;
+}
+
+.feature__img:first-of-type {
+    width: 512px;
+    height: 370px;
+}
+
+.feature__img:nth-of-type(2) {
+    width: 332px;
+    height: 370px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.feature__desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.67;
+}
+
+.feature__title {
+    margin-top: 82px;
+}
+
+.feature__btn {
+    margin-top: 38px;
 }
