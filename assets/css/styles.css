@@ -20,7 +20,6 @@ html {
 body {
     font-family: "Sora", sans-serif;
     font-size: 1.6rem;
-    height: 5000px;
 }
 
 /* Common */
@@ -451,4 +450,131 @@ a {
 
 .feature__btn {
     margin-top: 38px;
+}
+
+/* Member */
+
+.member {
+    padding: 85px 0;
+}
+
+.member__container {
+    text-align: center;
+}
+
+.member__cta {
+    margin-top: 38px;
+}
+
+.member__list {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+}
+
+.member-item {
+    max-width: 270px;
+}
+
+.member-item__img {
+    display: block;
+    transition: all 500ms ease;
+    max-width: 100%;
+    height: 290px;
+}
+
+.member-item:hover .member-item__img {
+    transform: scale(1.15);
+}
+
+.member-item__img-bg {
+    padding-top: 28px;
+    background: #EAF6FF;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.member-item__name {
+    margin-top: 12px;
+    color: var(--header-bg);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.member-item__desc {
+    color: #575F66;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.85;
+}
+
+.member__control {
+    margin-top: 38px;
+    display: inline-flex;
+    column-gap: 18px;
+}
+
+.member__control-btn {
+    /* make it round */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    /* color */
+    color: #575F66;
+    border: 1px solid currentColor;
+    /* center the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    transition: all 500ms ease;
+}
+
+.member__control-btn:hover {
+    color: #fff;
+    background: var(--primary-btn-color);
+    border-color: var(--primary-btn-color);
+}
+
+/* Install */
+.install {
+    margin-top: 180px;
+}
+
+.install__container {
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary-btn-color);
+}
+
+.install__img {
+    margin-top: -95px;
+    height: 522px;
+    display: block;
+}
+
+.install__content {
+    max-width: 586px;
+}
+
+.install__title {
+    max-width: 489px;
+    color: #FFF;
+}
+
+.install__desc {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.install__action {
+    margin-top: 38px;
+    display: flex;
+    column-gap: 28px;
 }
